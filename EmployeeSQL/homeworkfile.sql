@@ -93,7 +93,7 @@ inner join departments d on d.dept_no = de.dept_no;
 
 select first_name, last_name, sex 
 from employees
-where first_name = 'Hercules' and last_name LIKE 'B%'
+where first_name = 'Hercules' and last_name LIKE 'B%';
 
 select emp_no, last_name, first_name
 from employees where emp_no in (
@@ -105,7 +105,6 @@ from employees where emp_no in (
 		where dept_name = 'Sales'
 	));
 	
-select * from departments
 	
 select e.emp_no, e.last_name, e.first_name, d.dept_name
 from employees e
@@ -116,5 +115,5 @@ where d.dept_name IN ('Sales', 'Development');
 select last_name, count(last_name) as "# of last names"
 from employees 
 group by last_name
-order by "# of last names" DESC
+order by "# of last names" DESC;
 
